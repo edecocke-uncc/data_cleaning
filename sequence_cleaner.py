@@ -67,7 +67,6 @@ class TheVirusWrangler:
         print(f"\n{'-'*85}")
         print("Raw DataFrame")
         print(f"{'-'*85}")
-        print(self.df)
         print(f"\nNumber of duplicate rows : {self.df.duplicated().sum()}")
         print(f"\nMissing values per column:")
         print(self.df.isnull().sum())
@@ -200,7 +199,6 @@ class TheVirusWrangler:
         print(f"Total unique high-quality sequences : {total_sequences}")
         print(f"Total unique localities represented : {total_localities}")
         print(f"\nQuality(%) descriptive statistics:")
-        print(self.df_high_quality['Quality(%)'].describe().round(2))
 
     def export_to_csv(self, filename: str = "auroravirus9_cleaned.csv") -> None:
         """
