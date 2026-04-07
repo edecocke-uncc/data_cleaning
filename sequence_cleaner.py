@@ -232,7 +232,6 @@ class TheVirusWrangler:
         None
         """
         self.df_high_quality.to_csv(filename, index=False)
-        print(f"\n  Results saved to '{filename}'")
 
 if __name__ == "__main__":
 
