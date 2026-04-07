@@ -199,7 +199,8 @@ class TheVirusWrangler:
         print(f"Total unique high-quality sequences : {total_sequences}")
         print(f"Total unique localities represented : {total_localities}")
         print(f"\nQuality(%) descriptive statistics:")
-
+        print(self.df_high_quality['Quality(%)'].describe().round(2))
+        
     def export_to_csv(self, filename: str = "auroravirus9_cleaned.csv") -> None:
         """
         Exports the cleaned and filtered high-quality DataFrame to a CSV file.
