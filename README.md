@@ -16,7 +16,12 @@ git clone https://github.com/edecocke-uncc/data_cleaning.git
 cd data_cleaning
 ```
 
-3. Activate the environment:
+3. Create the environment:
+```bash
+conda env create -f environment.yml
+```
+
+4. Activate the environment:
 
 ```
 conda activate data_cleaning
