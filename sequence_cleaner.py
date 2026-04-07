@@ -64,9 +64,9 @@ class TheVirusWrangler:
         -------
         None
         """
-        print(f"\n{'-'*80}")
+        print(f"\n{'-'*85}")
         print("Raw DataFrame")
-        print(f"{'-'*80}")
+        print(f"{'-'*85}")
         print(self.df)
         print(f"\nNumber of duplicate rows : {self.df.duplicated().sum()}")
         print(f"\nMissing values per column:")
@@ -162,9 +162,9 @@ class TheVirusWrangler:
         self.df = self.df.sort_values(by='Quality(%)', ascending=False)
         self.df_high_quality = self.df[self.df['Quality(%)'] >= threshold]
 
-        print(f"\n{'-'*80}")
+        print(f"\n{'-'*100}")
         print(f"High-Quality Sequences (Quality >= {threshold}%)")
-        print(f"{'-'*80}")
+        print(f"{'-'*100}")
         print(self.df_high_quality)
         return self.df_high_quality
 
