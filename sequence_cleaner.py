@@ -131,21 +131,12 @@ class TheVirusWrangler:
         -------
         None
         """
-        # Drop rows where quality score is missing — required for filtering
         self.df = self.df.dropna(subset=['Quality(%)'])
-
-        # Fill remaining missing text fields with placeholders
         self.df = self.df.fillna({
             'Locality': 'Unknown',
             'Sequenced_At': 'Unknown',
             'Repository_Link': 'Unavailable'
         })
-
-        print(f"\n{'-'*60}")
-        print("Missing Value Report After Cleaning")
-        print(f"{'-'*60}")
-        print(self.df.isnull().sum())
-
     def rank_and_filter_the_worthy(self, threshold: float = 95.0) -> pd.DataFrame:
         """
         Sorts the cleaned DataFrame by quality score in descending order
