@@ -1,0 +1,8 @@
+name: data_cleaning
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - pip
